@@ -6,6 +6,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { SwitchesComponent } from './switches/switches.component';
 import { templateRoutingModule } from './templaterouting.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     CommonModule,
-    templateRoutingModule
+    templateRoutingModule,
+    FormsModule
   ],
   exports:[
     BasicosComponent,
