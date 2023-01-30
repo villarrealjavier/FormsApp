@@ -29,6 +29,38 @@
                     </span>
                 </div>
             </div>
+            
+        <!-- Añadir favorito -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Agregar</label>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <input class="form-control"
+                       placeholder="Agregar favorito"
+                       [(ngModel)]="nombre"
+                       name="nombre">
+                       
+
+                <button class="btn btn-outline-primary" (click)="add()" type="button">
+                    Agregar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista de favoritos -->
+    <div class="mb-3 row">
+        <div class="input-group mb-1" *ngFor="let item of persona.favoritos; let i=index">
+            
+            <input class="form-control" [(ngModel)]="item.nombre" name="favorito_{{i}}">
+
+            <button class="btn btn-outline-danger" type="button" (click)="delete(i)"> Eliminar </button>
+        </div>
+
+    </div>
+
+   
+
 
             <div class="row">
                 <div class="col">
@@ -38,6 +70,8 @@
                     </button>
                 </div>
             </div>
+
+            
 
 
 
